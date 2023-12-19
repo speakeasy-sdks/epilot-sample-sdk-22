@@ -25,7 +25,7 @@ import(
 
 func main() {
     s := templatespeakeasybar.New(
-        templatespeakeasybar.WithSecurity(""),
+        templatespeakeasybar.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -56,4 +56,4 @@ func main() {
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.APIError | 5XX                | application/json   |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
