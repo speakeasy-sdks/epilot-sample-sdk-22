@@ -32,6 +32,7 @@ func (s *Authentication) Authenticate(ctx context.Context, request operations.Au
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "authenticate",
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

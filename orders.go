@@ -33,6 +33,7 @@ func (s *Orders) CreateOrder(ctx context.Context, requestBody []shared.OrderInpu
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "createOrder",
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

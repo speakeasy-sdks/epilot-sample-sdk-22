@@ -32,6 +32,7 @@ func (s *Config) SubscribeToWebhooks(ctx context.Context, request []operations.R
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "subscribeToWebhooks",
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

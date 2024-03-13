@@ -33,6 +33,7 @@ func (s *Drinks) GetDrink(ctx context.Context, name string) (*operations.GetDrin
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "getDrink",
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -147,6 +148,7 @@ func (s *Drinks) ListDrinks(ctx context.Context, drinkType *shared.DrinkType) (*
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "listDrinks",
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

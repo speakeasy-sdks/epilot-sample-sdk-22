@@ -33,6 +33,7 @@ func (s *Ingredients) ListIngredients(ctx context.Context, ingredients []string)
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "listIngredients",
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
