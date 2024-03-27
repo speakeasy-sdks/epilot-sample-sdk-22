@@ -32,14 +32,13 @@ func main() {
     )
 
 
-    var name string = "string"
+    var name string = "<value>"
 
     ctx := context.Background()
     res, err := s.Drinks.GetDrink(ctx, name)
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Drink != nil {
         // handle response
     }
@@ -82,14 +81,13 @@ func main() {
     s := templatespeakeasybar.New()
 
 
-    var drinkType *shared.DrinkType = shared.DrinkTypeSpirit
+    var drinkType *shared.DrinkType = shared.DrinkTypeSpirit.ToPointer()
 
     ctx := context.Background()
     res, err := s.Drinks.ListDrinks(ctx, drinkType)
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Classes != nil {
         // handle response
     }

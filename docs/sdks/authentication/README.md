@@ -19,7 +19,6 @@ Authenticate with the API by providing a username and password.
 package main
 
 import(
-	"github.com/speakeasy-sdks/template-speakeasy-bar/pkg/models/shared"
 	templatespeakeasybar "github.com/speakeasy-sdks/template-speakeasy-bar"
 	"context"
 	"github.com/speakeasy-sdks/template-speakeasy-bar/pkg/models/operations"
@@ -27,16 +26,13 @@ import(
 )
 
 func main() {
-    s := templatespeakeasybar.New(
-        templatespeakeasybar.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := templatespeakeasybar.New()
 
     ctx := context.Background()
     res, err := s.Authentication.Authenticate(ctx, operations.AuthenticateRequestBody{})
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Object != nil {
         // handle response
     }
