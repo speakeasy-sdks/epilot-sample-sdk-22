@@ -39,14 +39,13 @@ func main() {
         },
     }
 
-    var callbackURL *string = "string"
+    var callbackURL *string = templatespeakeasybar.String("<value>")
 
     ctx := context.Background()
     res, err := s.Orders.CreateOrder(ctx, requestBody, callbackURL)
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Order != nil {
         // handle response
     }
