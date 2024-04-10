@@ -3,26 +3,28 @@ id: c6a0e819-06e3-46d1-8b94-c77347422300
 management:
   docChecksum: abbc3a8faac54f76013e5d509a8d11ec
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 0.9.1
-  configChecksum: 2603cde92e25daeeff959625e3917668
+  speakeasyVersion: 1.246.1
+  generationVersion: 2.302.1
+  releaseVersion: 0.10.0
+  configChecksum: e230bf38e2f2b23735725d60523f3226
   repoURL: https://github.com/speakeasy-sdks/epilot-sample-sdk-22.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/epilot-sample-sdk-22
   published: true
 features:
   go:
-    core: 3.3.1
+    callbacks: 1.0.0
+    core: 3.4.6
     devContainers: 2.90.0
     errors: 2.81.8
     examples: 2.81.3
     flattening: 2.81.1
-    globalSecurity: 2.82.3
-    globalServerURLs: 2.82.1
+    globalSecurity: 2.82.9
+    globalServerURLs: 2.82.2
     inputOutputModels: 2.83.0
-    methodSecurity: 2.82.1
+    responseFormat: 0.1.0
     serverIDs: 2.81.1
+    webhooks: 1.0.0
 generatedFiles:
   - authentication.go
   - drinks.go
@@ -31,8 +33,6 @@ generatedFiles:
   - config.go
   - speakeasy.go
   - go.mod
-  - go.sum
-  - tests/helpers.go
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
@@ -111,3 +111,4 @@ generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
   - .devcontainer/setup.sh
+  - internal/hooks/hooks.go

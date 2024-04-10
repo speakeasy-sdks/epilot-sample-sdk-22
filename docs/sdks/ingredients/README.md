@@ -32,7 +32,7 @@ func main() {
 
 
     ingredients := []string{
-        "string",
+        "<value>",
     }
 
     ctx := context.Background()
@@ -40,7 +40,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Classes != nil {
         // handle response
     }
